@@ -4,18 +4,16 @@ body{
 }
 
 #window{
-    background-color: greenyellow;
     height:50%;
     aspect-ratio: 1.15;
     position:relative;
     top:25%;
-    left:25%;
+    margin:auto;
     overflow: hidden;
 }
 
 .pano{
     height:100%;
-    left:0;
     position: absolute;
 }
 

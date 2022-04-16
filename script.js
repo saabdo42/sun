@@ -36,57 +36,31 @@ function sink(event){
         timeoutover = false;
         setTimeout(retimer, 100);
 
-        //////////
-
         var rulerheight = parseInt( document.getElementById("ruler").style.height ); //window height as number not pixels
 
         //compare mouse y to ruler height
         var percentdown = Math.round( (y / rulerheight) * 100 ); //percent of the way down the mouse is
-        
-        if ( percentdown < 17){
+        var panopos;
 
-            for (i=0; i < panoramas.length; i++){
-                panoramas[i].classList.replace("vis", "invis"); //hide all panos
-            }
-    
-            panoramas[0].classList.replace("invis", "vis"); //show first one
-    
+        if ( percentdown < 17){ //choose which pano to show
+            panopos = 0;
         }else if ( percentdown < 34){
-    
-            for (i=0; i < panoramas.length; i++){
-                panoramas[i].classList.replace("vis", "invis");
-            }
-    
-            panoramas[1].classList.replace("invis", "vis"); 
-    
+            panopos = 1; 
         }else if ( percentdown < 51){
-    
-            for (i=0; i < panoramas.length; i++){
-                panoramas[i].classList.replace("vis", "invis");
-            }
-    
-            panoramas[2].classList.replace("invis", "vis"); 
+            panopos = 2; 
         }else if ( percentdown < 68){
-    
-            for (i=0; i < panoramas.length; i++){
-                panoramas[i].classList.replace("vis", "invis");
-            }
-    
-            panoramas[3].classList.replace("invis", "vis"); 
+            panopos = 3; 
         }else if ( percentdown < 85){
-    
-            for (i=0; i < panoramas.length; i++){
-                panoramas[i].classList.replace("vis", "invis");
-            }
-    
-            panoramas[4].classList.replace("invis", "vis"); 
+            panopos = 4; 
         }else if ( percentdown < 100){
-    
-            for (i=0; i < panoramas.length; i++){
-                panoramas[i].classList.replace("vis", "invis");
-            }
-    
-            panoramas[5].classList.replace("invis", "vis"); 
+            panopos = 5; 
         }            
+
+        for (i=0; i < panoramas.length; i++){
+            panoramas[i].classList.replace("vis", "invis"); //hide all panos
+        }
+
+        panoramas[panopos].classList.replace("invis", "vis"); //show the one
+
     }
 }
