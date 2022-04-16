@@ -43,7 +43,7 @@ function sink(event){
         //compare mouse y to ruler height
         var percentdown = Math.round( (y / rulerheight) * 100 ); //percent of the way down the mouse is
         
-        if ( percentdown < 33){
+        if ( percentdown < 17){
 
             for (i=0; i < panoramas.length; i++){
                 panoramas[i].classList.replace("vis", "invis"); //hide all panos
@@ -51,7 +51,7 @@ function sink(event){
     
             panoramas[0].classList.replace("invis", "vis"); //show first one
     
-        }else if ( percentdown < 66 ){
+        }else if ( percentdown < 34){
     
             for (i=0; i < panoramas.length; i++){
                 panoramas[i].classList.replace("vis", "invis");
@@ -59,13 +59,34 @@ function sink(event){
     
             panoramas[1].classList.replace("invis", "vis"); 
     
-        }else if ( percentdown < 100){
+        }else if ( percentdown < 51){
     
             for (i=0; i < panoramas.length; i++){
                 panoramas[i].classList.replace("vis", "invis");
             }
     
             panoramas[2].classList.replace("invis", "vis"); 
-        }        
+        }else if ( percentdown < 68){
+    
+            for (i=0; i < panoramas.length; i++){
+                panoramas[i].classList.replace("vis", "invis");
+            }
+    
+            panoramas[3].classList.replace("invis", "vis"); 
+        }else if ( percentdown < 85){
+    
+            for (i=0; i < panoramas.length; i++){
+                panoramas[i].classList.replace("vis", "invis");
+            }
+    
+            panoramas[4].classList.replace("invis", "vis"); 
+        }else if ( percentdown < 100){
+    
+            for (i=0; i < panoramas.length; i++){
+                panoramas[i].classList.replace("vis", "invis");
+            }
+    
+            panoramas[5].classList.replace("invis", "vis"); 
+        }            
     }
 }
