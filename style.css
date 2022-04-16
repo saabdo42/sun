@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(65, 65, 65);
+    overflow: hidden;
+}
+
+#window{
+    background-color: greenyellow;
+    height:50%;
+    aspect-ratio: 1.15;
+    position:relative;
+    top:25%;
+    left:25%;
+    overflow: hidden;
+}
+
+.pano{
+    height:100%;
+    left:0;
+    position: absolute;
+}
+
+.invis{
+    display: none;
+}
+
+.vis{
+    display: block;
+}
+
+#ruler{
+    position: absolute;
+    z-index: -5;
+}
