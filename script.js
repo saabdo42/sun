@@ -5,7 +5,7 @@ function sniff(){ //finds size of window
     document.getElementById("ruler").style.height = windowheight; //resizes "ruler" to full screen
 }
 
-setInterval(scoot, 100); //every 83 ms (12 fps) scoot the panoramas
+setInterval(scoot, 100); //every 100 ms (10 fps) scoot the panoramas
 
 function scoot(){ //scooting the panoramas to the next frame
 
